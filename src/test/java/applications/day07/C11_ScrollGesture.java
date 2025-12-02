@@ -1,5 +1,6 @@
 package applications.day07;
 
+import applications.utilities.ReusableMethods;
 import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.WebElement;
@@ -16,11 +17,20 @@ public class C11_ScrollGesture extends ApiDemosBaseTest {
         driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Spinner\"))"));
         Thread.sleep(3000);
 
+    }
+
+    @Test
+    public void testScrollToElement2() throws InterruptedException {
+        WebElement views = driver.findElement(AppiumBy.accessibilityId("Views"));
+        views.click();
+
+        WebElement element = driver.findElement(AppiumBy.id("android:id/list"));
+        ReusableMethods.scrollGesture(driver,element,"down",2,500);
+        Thread.sleep(3000);
+
 
 
     }
-
-
 
 
     @Test
