@@ -44,6 +44,7 @@ public class P05_Telefon_LongClickGesture extends TelefonBaseTest {
         Thread.sleep(9000);
 
 
+        System.out.println(driver.findElement(hataMesaji).getText());
         Assert.assertEquals("Mobil ağ kullanılamıyor.",driver.findElement(hataMesaji).getText());
     }
 }

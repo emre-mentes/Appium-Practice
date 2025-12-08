@@ -20,7 +20,7 @@ public class C13_FlingeGesture extends ApiDemosBaseTest {
         driver.executeScript("mobile: flingGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) element).getId(),
                 "direction", "down",
-                "speed",5000
+                "speed",10000
         ));
 
 
