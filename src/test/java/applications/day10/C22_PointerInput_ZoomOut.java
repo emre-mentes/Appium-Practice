@@ -20,6 +20,7 @@ public class C22_PointerInput_ZoomOut extends VodQABaseTest {
         driver.findElement(AppiumBy.accessibilityId("Ping & Zoom")).click();
 
         ReusableMethods.bekle(3);
+
         PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH,"finger1");
         PointerInput finger2 = new PointerInput(PointerInput.Kind.TOUCH,"finger2");
 
