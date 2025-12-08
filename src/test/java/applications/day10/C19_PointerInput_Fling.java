@@ -20,6 +20,7 @@ public class C19_PointerInput_Fling extends ApiDemosBaseTest {
 
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH,"finger");
         Sequence sequence = new Sequence(finger,1)
+
                 .addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),350,1000))
                 .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
                 .addAction(new Pause(finger,Duration.ofMillis(200)))
