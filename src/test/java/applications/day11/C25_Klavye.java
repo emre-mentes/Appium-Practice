@@ -25,7 +25,7 @@ public class C25_Klavye extends ApiDemosBaseTest {
         /// Burada klavyenin ekranda olup olmadığını kontrol ediyor.
 
         driver.hideKeyboard();
-        /// Açık olan klavyeyi kapatır
+        /// Acik olan klavyeyi kapatır
 
         System.out.println(driver.isKeyboardShown());
 
