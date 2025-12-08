@@ -21,16 +21,18 @@ public class C20_PointerInput_DragAndDrop extends ApiDemosBaseTest {
         driver.findElement(AppiumBy.accessibilityId("Drag and Drop")).click();
 
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH,"finger");
-        Sequence sequence = new Sequence(finger, 1)
+
+        Sequence sequence = new Sequence(finger,1)
+
                 .addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),160,450))
                 .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
-                .addAction(new Pause(finger,Duration.ofMillis(50)))
-                .addAction(finger.createPointerMove(Duration.ofMillis(2000), PointerInput.Origin.viewport(),500,450))
+                .addAction(new Pause(finger,Duration.ofMillis(350)))
+                .addAction(finger.createPointerMove(Duration.ofMillis(450),PointerInput.Origin.viewport(),500,450))
                 .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-
 
         driver.perform(Collections.singletonList(sequence));
         ReusableMethods.bekle(5);
+
 
     }
 }
