@@ -20,31 +20,30 @@ public class C16_PointerInput_DoubleTap extends CalculatorBaseTest {
         driver.findElement(AppiumBy.accessibilityId("5")).click();
         driver.findElement(AppiumBy.accessibilityId("7")).click();
 
-        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH,"finger");
-        Sequence sequence =new Sequence(finger,1)
+
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        Sequence sequence = new Sequence(finger, 1)
+
                 /// ilk tiklama
-                .addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),600,250))
+                .addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), 600, 250))
                 .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
-                .addAction(new Pause(finger,Duration.ofMillis(300)))
+                .addAction(new Pause(finger, Duration.ofMillis(300)))
                 .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()))
 
+
                 ///  ikinci tiklama
-                .addAction(finger.createPointerMove(Duration.ofMillis(10), PointerInput.Origin.viewport(),595,255))
+                .addAction(finger.createPointerMove(Duration.ofMillis(10), PointerInput.Origin.viewport(), 595, 255))
                 .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
-                .addAction(new Pause(finger,Duration.ofMillis(300)))
+                .addAction(new Pause(finger, Duration.ofMillis(300)))
                 .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         driver.perform(Collections.singletonList(sequence));
 
 
-
-
-        //WebElement element = driver.findElement(AppiumBy.id("com.google.android.calculator:id/formula"));
-
-     /// driver.executeScript("mobile: doubleClickGesture", ImmutableMap.of(
-     ///         "x",600,
-     ///         "y",250
-     /// ));
-
+        /// WebElement element = driver.findElement(AppiumBy.id("com.google.android.calculator:id/formula"
+        ///  driver.executeScript("mobile: doubleClickGesture", ImmutableMap.of(
+        ///          "x",600,
+        ///          "y",250
+        ///  ));
 
 
     }
