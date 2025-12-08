@@ -22,7 +22,6 @@ public class C27_MobilWebUygulamaTesti extends ChromeBrowserBaseTest {
         System.out.println(driver.getCurrentUrl());
         System.out.println(driver.getTitle());
 
-
         //driver.get("https://www.amazon.com");
         ReusableMethods.bekle(3);
     }
