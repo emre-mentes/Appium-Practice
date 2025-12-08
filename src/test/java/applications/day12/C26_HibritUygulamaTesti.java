@@ -30,6 +30,7 @@ public class C26_HibritUygulamaTesti extends ApiDemosBaseTest {
         appium --allow-insecure chromedriver_autodownload
         hoca yukardakini yazdi ama o ders zamani appium 2 ile calisdiklari icin bende o calismadi, bende yukardaki komutun appium 3 ile
         güncellenmis halini bulup calistirmayi denedim. hata vermedi ama testim gene gecmedi
+
         appium --allow-insecure=*:chromedriver_autodownload
 
 
