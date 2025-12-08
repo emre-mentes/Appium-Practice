@@ -35,7 +35,6 @@ public class C25_Klavye extends ApiDemosBaseTest {
     @Test
     public void testPressKey() {
 
-
         driver.findElement(AppiumBy.accessibilityId("Views")).click();
         driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"TextFields\"))"));
         driver.findElement(AppiumBy.accessibilityId("TextFields")).click();
@@ -57,7 +56,7 @@ public class C25_Klavye extends ApiDemosBaseTest {
 
        driver.pressKey(new KeyEvent(AndroidKey.BACK));
        driver.pressKey(new KeyEvent(AndroidKey.APP_SWITCH));
-        driver.pressKey(new KeyEvent(AndroidKey.HOME));
+       driver.pressKey(new KeyEvent(AndroidKey.HOME));
 
 
 
