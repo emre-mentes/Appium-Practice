@@ -78,6 +78,45 @@ public class ReusableMethods {
 
     }
 
+    public static void pinchOpenGesture(AndroidDriver driver, WebElement element, double percent, int speed) {
+        driver.executeScript("mobile: pinchOpenGesture", ImmutableMap.of(
+                "elementId", ((RemoteWebElement) element).getId(),
+                "percent", percent,
+                "speed", speed
+        ));
+    }
+
+    public static void pinchOpenGesture(AndroidDriver driver, int left, int top, int width, int height, double percent, int speed) {
+        driver.executeScript("mobile: pinchOpenGesture", ImmutableMap.of(
+                "left", left,
+                "top", top,
+                "width", width,
+                "height", height,
+                "percent", percent,
+                "speed", speed
+        ));
+    }
+
+    public static void pinchCloseGesture(AndroidDriver driver, WebElement element, double percent, int speed) {
+        driver.executeScript("mobile: pinchCloseGesture", ImmutableMap.of(
+                "elementId", ((RemoteWebElement) element).getId(),
+                "percent", percent,
+                "speed", speed
+        ));
+    }
+
+    public static void pinchCloseGesture(AndroidDriver driver, int left, int top, int width, int height, double percent, int speed) {
+        driver.executeScript("mobile: pinchCloseGesture", ImmutableMap.of(
+                "left", left,
+                "top", top,
+                "width", width,
+                "height", height,
+                "percent", percent,
+                "speed", speed
+        ));
+
+    }
+
     public static void dragGesture(AndroidDriver driver, WebElement element,int endX, int endY){
         driver.executeScript("mobile: dragGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) element).getId(),

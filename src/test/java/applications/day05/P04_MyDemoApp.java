@@ -51,6 +51,7 @@ public class P04_MyDemoApp extends MyDemoAppBaseTest {
 
 
         WebElement blue2 = driver.findElement(AppiumBy.xpath("(//android.view.ViewGroup[@content-desc=\"product row\"])[1] //android.view.ViewGroup[contains(@content-desc,'blue circle')]"));
+        //WebElement extra = driver.findElement(AppiumBy.xpath("(//android.view.ViewGroup[@content-desc=\"product row\"])[1] //android.view.ViewGroup[@content-desc=\"blue circle\"]"));
 
         Assert.assertTrue(driver.findElement(blue).isDisplayed());
         Assert.assertTrue(driver.findElement(red).isDisplayed());

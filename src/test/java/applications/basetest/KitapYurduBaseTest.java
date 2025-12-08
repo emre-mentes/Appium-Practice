@@ -18,7 +18,7 @@ public class KitapYurduBaseTest {
 
         UiAutomator2Options options = new UiAutomator2Options()
                 .setAppPackage("com.mobisoft.kitapyurdu")
-                .setAppActivity("com.mobisoft.kitapyurdu.main.SplashActivity");
+                .setAppActivity("com.mobisoft.kitapyurdu.main.SplashActivity");// apk info activitiy den aldik bu splash bilgisini
 
         URL url = new URL("http://0.0.0.0:4723");
         driver = new AndroidDriver(url, options);

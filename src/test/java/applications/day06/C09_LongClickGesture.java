@@ -14,13 +14,10 @@ public class C09_LongClickGesture extends ApiDemosBaseTest {
     @Test
     public void testLongClickGestureElement() throws InterruptedException {
 
-
-
         driver.findElement(AppiumBy.accessibilityId("App")).click();
         driver.findElement(AppiumBy.accessibilityId("Fragment")).click();
         driver.findElement(AppiumBy.accessibilityId("Context Menu")).click();
         WebElement element = driver.findElement(AppiumBy.accessibilityId("Long press me"));
-
 
         driver.executeScript("mobile: longClickGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) element).getId(),
@@ -30,9 +27,19 @@ public class C09_LongClickGesture extends ApiDemosBaseTest {
     }
 
     @Test
+    public void testLongClickGestureElement2() throws InterruptedException {
+
+        driver.findElement(AppiumBy.accessibilityId("App")).click();
+        driver.findElement(AppiumBy.accessibilityId("Fragment")).click();
+        driver.findElement(AppiumBy.accessibilityId("Context Menu")).click();
+        WebElement element = driver.findElement(AppiumBy.accessibilityId("Long press me"));
+
+        ReusableMethods.longClickGesture(driver,element,1000);
+        Thread.sleep(5000);
+    }
+
+    @Test
     public void testLongClickGestureCoordinate() throws InterruptedException {
-
-
 
         driver.findElement(AppiumBy.accessibilityId("App")).click();
         driver.findElement(AppiumBy.accessibilityId("Fragment")).click();
@@ -41,9 +48,7 @@ public class C09_LongClickGesture extends ApiDemosBaseTest {
 
         ReusableMethods.longClickGesture(driver,400,350,1000);
 
-
-
-
         Thread.sleep(5000);
     }
+
 }
