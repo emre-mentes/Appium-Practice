@@ -22,8 +22,10 @@ public class C25_Klavye extends ApiDemosBaseTest {
         driver.findElement(AppiumBy.id("io.appium.android.apis:id/edit")).click();
 
         System.out.println(driver.isKeyboardShown());
+        /// Burada klavyenin ekranda olup olmadığını kontrol ediyor.
 
         driver.hideKeyboard();
+        /// Açık olan klavyeyi kapatır
 
         System.out.println(driver.isKeyboardShown());
 
