@@ -22,8 +22,10 @@ public class C25_Klavye extends ApiDemosBaseTest {
         driver.findElement(AppiumBy.id("io.appium.android.apis:id/edit")).click();
 
         System.out.println(driver.isKeyboardShown());
+        /// Burada klavyenin ekranda olup olmadığını kontrol ediyor.
 
         driver.hideKeyboard();
+        /// Acik olan klavyeyi kapatır
 
         System.out.println(driver.isKeyboardShown());
 
@@ -32,7 +34,6 @@ public class C25_Klavye extends ApiDemosBaseTest {
 
     @Test
     public void testPressKey() {
-
 
         driver.findElement(AppiumBy.accessibilityId("Views")).click();
         driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"TextFields\"))"));
@@ -55,7 +56,7 @@ public class C25_Klavye extends ApiDemosBaseTest {
 
        driver.pressKey(new KeyEvent(AndroidKey.BACK));
        driver.pressKey(new KeyEvent(AndroidKey.APP_SWITCH));
-        driver.pressKey(new KeyEvent(AndroidKey.HOME));
+       driver.pressKey(new KeyEvent(AndroidKey.HOME));
 
 
 
