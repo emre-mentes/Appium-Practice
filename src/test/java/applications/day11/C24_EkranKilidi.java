@@ -7,6 +7,22 @@ import applications.utilities.ReusableMethods;
 import java.time.Duration;
 
 
+/*
+
+🔒 driver.lockDevice(Duration.ofSeconds(x))
+: Cihazı belirtilen süre boyunca kilitler, süre bitince otomatik açar.
+
+🔓 driver.unlockDevice()
+: Eğer cihaz kilitliyse, hemen kilidini açar.
+
+❔ driver.isDeviceLocked()
+: Cihazın o anda kilitli olup olmadığını kontrol eder.
+
+
+ */
+
+
+
 public class C24_EkranKilidi extends DeviceBaseTest {
 
     @Test
