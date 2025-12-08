@@ -20,10 +20,13 @@ public class C15_PointerInput_Tap extends ApiDemosBaseTest {
         Sequence sequence = new Sequence(finger,1)
                 /// parmak, ekran üzerindeki tap yapilacak koordinata hareket ettirilir
                 .addAction(finger.createPointerMove(Duration.ofMillis(0),PointerInput.Origin.viewport(),500,1000))
+
                 /// parmak ile, farenin sol tusuna basar gibi ekranda belirledigimiz koordinata bastik
                 .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+
                 /// ekranda parmaginbasili olarak duracagi sureyi belirledik
                 .addAction(new Pause(finger,Duration.ofMillis(300)))
+
                 /// parmagi ekranda bastigimiz koordinattan kaldirdik
                 .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 

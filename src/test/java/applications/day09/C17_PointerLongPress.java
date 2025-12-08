@@ -23,17 +23,16 @@ public class C17_PointerLongPress extends ApiDemosBaseTest {
         driver.findElement(AppiumBy.accessibilityId("Fragment")).click();
         driver.findElement(AppiumBy.accessibilityId("Context Menu")).click();
 
+
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH,"finger");
         Sequence sequence = new Sequence(finger,1)
-                .addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), 400, 350))
+
+                .addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),400,350))
                 .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
                 .addAction(new Pause(finger,Duration.ofMillis(1000)))
                 .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
         driver.perform(Collections.singletonList(sequence));
-
-        ReusableMethods.bekle(2);
-
-
 
 
 
